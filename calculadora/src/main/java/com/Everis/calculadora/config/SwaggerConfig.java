@@ -36,8 +36,8 @@ public class SwaggerConfig
 	@Bean
 	public Docket swaggerSpringfoxDocket() {
 		ApiInfo apiInfo = new ApiInfo(
-				"Servicio Maestro de RCE",
-				"Servicios RCE",
+				"Calculadora",
+				"Calculadora",
 				appVersion,
 				"Terms of service",
 				new Contact("Goggle", "google.com", ""),
@@ -59,7 +59,7 @@ public class SwaggerConfig
 				.useDefaultResponseMessages(false);
 
 		docket = docket.select()
-				.apis(RequestHandlerSelectors.basePackage("com.rce.rce2.controller"))
+				.apis(RequestHandlerSelectors.basePackage("com.Everis.calculadora"))
 				.paths(PathSelectors.any())
 				.build();
 		return docket;
